@@ -1,15 +1,27 @@
 munin-nginx-ubuntu
 ==================
 
-How's your server doing? This steps will take you through installing munin and the munin nginx plugins. Unless you haven't installed nginx follow the steps at http://github.com/jnstq/rails-nginx-passenger-ubuntu. But in the configure add --with-http_stub_status_module argument.
+How's your server doing? Encharge your new rails server with stats from munin. This steps will take you through installing munin and the munin nginx plugins. Unless you haven't installed nginx follow the steps at [rails-nginx-passenger-ubuntu](http://github.com/jnstq/rails-nginx-passenger-ubuntu). But in the configure add --with-http_stub_status_module argument.
 
-If you already installed nginx, check the latest configure argument with the -V flag
+![alt "CPU Load"](http://blogs.amd.co.at/robe/2008/12/21/muninstats/mirror.inode.at-cpu-week.png)
+
+If you already installed nginx, check the latest configure argument with the -V flag and recompile it with --with-http_stub_status_module
     
     $ /opt/nginx/sbin/nginx -V
     nginx version: nginx/0.7.63
     configure arguments: --prefix=/opt/nginx --add-module=/opt/ruby/lib/ruby/gems/1.8/gems/passenger-2.2.5/ext/nginx --with-http_ssl_module --with-pcre=/home/deploy/src/pcre-8.00/
     
+About Munin
+===========
+
+Munin the monitoring tool surveys all your computers and remembers what it saw. It presents all the information in graphs through a web interface. Its emphasis is on plug and play capabilities. After completing a installation a high number of monitoring plugins will be playing with no more effort.
+
+Using Munin you can easily monitor the performance of your computers, networks, SANs, applications, weather measurements and whatever comes to mind. It makes it easy to determine "what's different today" when a performance problem crops up. It makes it easy to see how you're doing capacity-wise on any resources.
+
+Out of the box it comes with a lot of useful stats for a rails developer (and system administrator). For example cpu, forks, interrupts. iostat. irqstats. load. memory, mysql_bytes, mysql_queries. mysql_slowqueries. mysql_threads. netstat, open_files, open_inodes, processes, sendmail_mailqueue, sendmail_mailstats, sendmail_mailtraffic, swap amd vmstat
+
 Recompiling
+===========
     
     cd
     mkdir -p src
