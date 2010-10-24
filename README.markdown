@@ -18,7 +18,7 @@ Munin the monitoring tool surveys all your computers and remembers what it saw. 
 
 Using Munin you can easily monitor the performance of your computers, networks, SANs, applications, weather measurements and whatever comes to mind. It makes it easy to determine "what's different today" when a performance problem crops up. It makes it easy to see how you're doing capacity-wise on any resources.
 
-[Munin website](http://munin.projects.linpro.no/) | [MuninExchange plugin catalog](http://muninexchange.projects.linpro.no/)
+[Munin website](http://munin-monitoring.org/) | [MuninExchange plugin catalog](http://exchange.munin-monitoring.org/plugins/nginx_memory/version/1/download)
 
 Out of the box it comes with a lot of useful stats for a rails developer (and system administrator). For example cpu, forks, interrupts. iostat. irqstats. load. memory, mysql_bytes, mysql_queries. mysql_slowqueries. mysql_threads. netstat, open_files, open_inodes, processes, sendmail_mailqueue, sendmail_mailstats, sendmail_mailtraffic, swap amd vmstat
 
@@ -112,9 +112,9 @@ Munin nginx plugins
 -------------------
 
     cd /usr/share/munin/plugins
-    sudo wget -O nginx_request http://muninexchange.projects.linpro.no/download.php?phid=64
-    sudo wget -O nginx_status http://muninexchange.projects.linpro.no/download.php?phid=65
-    sudo wget -O nginx_memory http://muninexchange.projects.linpro.no/download.php?phid=626    
+    sudo wget -O nginx_request http://exchange.munin-monitoring.org/plugins/nginx_request/version/2/download
+    sudo wget -O nginx_status http://exchange.munin-monitoring.org/plugins/nginx_status/version/3/download
+    sudo wget -O nginx_memory http://exchange.munin-monitoring.org/plugins/nginx_memory/version/1/download  
     
     sudo chmod +x nginx_request
     sudo chmod +x nginx_status
