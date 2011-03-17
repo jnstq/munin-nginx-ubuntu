@@ -123,7 +123,7 @@ Munin nginx plugins
     sudo ln -s /usr/share/munin/plugins/nginx_request /etc/munin/plugins/nginx_request
     sudo ln -s /usr/share/munin/plugins/nginx_status /etc/munin/plugins/nginx_status
     sudo ln -s /usr/share/munin/plugins/nginx_memory /etc/munin/plugins/nginx_memory
-
+    
 
 Edit /etc/munin/plugin-conf.d/munin-node and add the lines
 
@@ -133,6 +133,14 @@ Edit /etc/munin/plugin-conf.d/munin-node and add the lines
 Restart munin-node with
     
     sudo /etc/init.d/munin-node restart
+
+CentOS Note
+------------------
+Everything seems to work on Centos 5.5 with one small exception: pidof lives in /sbin and the nginx_memory plugin expects it to be in the PATH. 
+There are several solutions:
+    1. symlink pidof to /bin
+    2. add /sbin to PATH (not recommended)
+    3. edit the plugin and change pidof to be /sbin/pidof    
     
 
 Browse to stats.yourdomain.com
