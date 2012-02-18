@@ -112,9 +112,9 @@ Munin nginx plugins
 -------------------
 
     cd /usr/share/munin/plugins
-    sudo wget -O nginx_request http://exchange.munin-monitoring.org/plugins/nginx_request/version/2/download
-    sudo wget -O nginx_status http://exchange.munin-monitoring.org/plugins/nginx_status/version/3/download
-    sudo wget -O nginx_memory http://exchange.munin-monitoring.org/plugins/nginx_memory/version/1/download  
+    sudo wget -O nginx_request https://raw.github.com/munin-monitoring/contrib/master/plugins/nginx/nginx_request
+    sudo wget -O nginx_status https://raw.github.com/munin-monitoring/contrib/master/plugins/nginx/nginx_status
+    sudo wget -O nginx_memory https://raw.github.com/munin-monitoring/contrib/master/plugins/nginx/nginx_memory 
     
     sudo chmod +x nginx_request
     sudo chmod +x nginx_status
